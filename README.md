@@ -9,7 +9,17 @@
 
 **SwiftMonster** researches, designs, and manufactures aerospace-grade hydrofoil equipment born from deep Pacific ocean swells. Built with **Toray T1100 High-Modulus Carbon Fiber** and **Grade 5 Titanium**, the fleet achieves sub-planing early takeoff (6.8 kts), class-leading glide ratios (14.8:1), and race-proven speed ceilings exceeding 38.4 knots.
 
-The web application is built on **Angular 21** with zoneless change detection, reactive signals, Tailwind CSS v4 design tokens, and multi-page static prerendering configured for **Cloudflare** deployment with root `index.html`.
+The application is built on **React 19 + Vite** with TypeScript, React Router 7, and Tailwind CSS v4. It is specifically architected for seamless out-of-the-box deployment to **Cloudflare Pages**.
+
+---
+
+## ☁️ Cloudflare Pages Compatibility
+
+Cloudflare Pages automatically detects and builds this project with zero manual overrides needed:
+
+- **Root Entry Point (`index.html`)**: Located directly at the root of the repository as required by Vite and Cloudflare Pages.
+- **Predictable Output Folder (`dist/`)**: Vite compiles the entire client application into a clean, flat `/dist` directory (avoiding Angular's complex nested `/dist/app/browser` subfolders that cause 404s on Cloudflare).
+- **SPA Client-Side Routing (`public/_redirects`)**: Contains `/* /index.html 200` to guarantee smooth, persistent URL routing across all 6 pages (`/products`, `/hydrodynamics`, `/creed`, `/quiver`, `/community`, `/`).
 
 ---
 
@@ -19,7 +29,7 @@ The web application is built on **Angular 21** with zoneless change detection, r
 - **Next-Gen Aerodynamics 2025 Fleet Reveal**: Highlighting our latest autoclave composite advancements.
 - **Bioluminescent Flight Aero-Telemetry Console**: Interactive digital dashboard with prototype switcher (*Hawk-X 850cm²*, *Apex-Pro 1050cm²*, *HydroSpeed GT 620cm²*), real-time buoy swell wave simulation, aspect ratio readouts, and drag minimization telemetry.
 - **Key Performance Metrics Strip**: Four high-contrast pastel telemetry cards for Takeoff Threshold, Glide Ratio, Pre-preg HM Carbon (T1100), and GPS Speed Record.
-- **Creed & Lab Launchpads**: Fast links to the deep-dive research pages.
+- **Creed & Lab Launchpads**: Fast links to deep-dive research pages.
 
 ### 2. **Fleet Lineup (`/products`)**
 - **Strict Tier Architecture**:
@@ -58,12 +68,15 @@ The web application is built on **Angular 21** with zoneless change detection, r
 
 ## 🛠 Tech Stack & Architecture
 
-- **Framework**: [Angular 21](https://angular.dev/) (Zoneless Change Detection, Standalone Components, Reactive Signals, Control Flow `@if` / `@for`)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) with `@theme` design tokens and custom chromatic pastel utilities
-- **Server-Side Rendering / Prerendering**: `@angular/ssr` with Express 5 backend and static route prerendering
+- **Framework**: [React 19](https://react.dev/) + [Vite](https://vite.dev/)
+- **Routing**: [React Router v7](https://reactrouter.com/) (Browser routing with SPA fallback via `public/_redirects`)
+- **State Management**: React Context (`FleetContext`) powering live buoy simulation, quiver calculations, and pre-order state
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) with `@tailwindcss/vite`
 - **Iconography & Typography**: Space Grotesk, JetBrains Mono, and Google Material Symbols
-- **Cloudflare Compatibility**:
-  - Root `index.html` configured in `angular.json` (`"index": "index.html"`) for Cloudflare Pages / Workers static hosting.
+- **Cloudflare Pages Ready**:
+  - Root `index.html` entry point
+  - Output folder: `dist/`
+  - Build command: `npm run build`
 
 ---
 
@@ -82,18 +95,13 @@ npm install
 ```bash
 npm run dev
 ```
-The dev server binds to `http://localhost:3000`.
+The dev server binds to `http://0.0.0.0:3000`.
 
 ### Production Build
 ```bash
 npm run build
 ```
-Generates the optimized client bundles and prerendered HTML routes in `dist/app/browser`.
-
-### Linting
-```bash
-npm run lint
-```
+Generates the optimized static distribution files in `dist/`.
 
 ---
 
