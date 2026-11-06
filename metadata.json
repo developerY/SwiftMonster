@@ -1,0 +1,6 @@
+{
+  "name": "SwiftMonster Hydrofoils",
+  "description": "Next-gen aerodynamic hydrofoils, parawings, and marine telemetry lab crafted for high-efficiency glide across ocean swells.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
