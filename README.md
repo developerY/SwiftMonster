@@ -19,7 +19,7 @@ Cloudflare Pages automatically detects and builds this project with zero manual 
 
 - **Root Entry Point (`index.html`)**: Located directly at the root of the repository as required by Vite and Cloudflare Pages.
 - **Predictable Output Folder (`dist/`)**: Vite compiles the entire client application into a clean, flat `/dist` directory (avoiding Angular's complex nested `/dist/app/browser` subfolders that cause 404s on Cloudflare).
-- **SPA Client-Side Routing (`public/_redirects`)**: Contains `/* /index.html 200` to guarantee smooth, persistent URL routing across all 6 pages (`/products`, `/hydrodynamics`, `/creed`, `/quiver`, `/community`, `/`).
+- **Native SPA Routing (Clean URLs)**: Cloudflare Pages natively falls back to `/index.html` with a 200 OK status for all client routes when no `404.html` exists, eliminating infinite redirect loops (`[code: 100324]`).
 
 ---
 
