@@ -1,10 +1,10 @@
 // @ts-check
-const eslint = require('@eslint/js');
-const { defineConfig } = require('eslint/config');
-const tseslint = require('typescript-eslint');
-const globals = require('globals');
+import eslint from '@eslint/js';
+import { defineConfig } from 'eslint/config';
+import tseslint from 'typescript-eslint';
+import globals from 'globals';
 
-module.exports = defineConfig([
+export default defineConfig([
   {
     ignores: ['dist/**', 'node_modules/**', 'public/**', '**/*.js'],
   },
