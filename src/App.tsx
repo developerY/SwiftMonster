@@ -64,9 +64,13 @@ const AppLayout: React.FC = () => {
             to="/"
             onClick={() => setMobileMenuOpen(false)}
             className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 rounded-lg">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-400 via-teal-300 to-indigo-300 p-[1.5px] shadow-sm transition-transform group-hover:scale-105">
-              <div className="w-full h-full rounded-[10px] bg-white flex items-center justify-center text-teal-600 font-black text-xl shadow-inner">
-                ⚡
+            <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-cyan-400 via-teal-300 to-indigo-300 p-[1.5px] shadow-sm transition-transform group-hover:scale-105">
+              <div className="w-full h-full rounded-[10px] bg-white p-1 flex items-center justify-center overflow-hidden">
+                <img
+                  src="/assets/aistudio/Swift_Monster_Icon_b2946b8d.png"
+                  alt="SwiftMonster Bird of Prey Omega Emblem"
+                  className="w-full h-full object-contain"
+                />
               </div>
             </div>
             <div className="flex flex-col">
@@ -304,9 +308,13 @@ const AppLayout: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
             <div className="lg:col-span-2 flex flex-col gap-4">
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-400 via-teal-300 to-indigo-300 p-[1.5px] shadow-sm">
-                  <div className="w-full h-full rounded-[10px] bg-white flex items-center justify-center text-teal-600 font-black text-xl shadow-inner">
-                    ⚡
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-400 via-teal-300 to-indigo-300 p-[1.5px] shadow-sm">
+                  <div className="w-full h-full rounded-[10px] bg-white p-1 flex items-center justify-center overflow-hidden">
+                    <img
+                      src="/assets/aistudio/Swift_Monster_Icon_b2946b8d.png"
+                      alt="SwiftMonster Bird of Prey Omega Emblem"
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                 </div>
                 <div className="flex flex-col">

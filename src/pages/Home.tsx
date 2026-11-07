@@ -76,9 +76,13 @@ export const Home: React.FC = () => {
             {/* Left Copy */}
             <div className="flex flex-col max-w-2xl gap-5">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-teal-200/70 shadow-sm backdrop-blur-sm w-fit">
-                <span className="inline-block w-2.5 h-2.5 rounded-full bg-teal-400 animate-ping"></span>
+                <img
+                  src="/assets/aistudio/Swift_Monster_Icon_b2946b8d.png"
+                  alt="SwiftMonster Emblem"
+                  className="w-4 h-4 object-contain inline-block"
+                />
                 <span className="font-label-sm text-[11px] tracking-wider uppercase text-teal-800 font-semibold bg-gradient-to-r from-teal-700 via-sky-700 to-indigo-700 bg-clip-text text-transparent">
-                  ⚡ NEXT-GEN HYDROFOIL AERODYNAMICS — 2025 FLEET REVEAL
+                  NEXT-GEN HYDROFOIL AERODYNAMICS — 2025 FLEET REVEAL
                 </span>
               </div>
 

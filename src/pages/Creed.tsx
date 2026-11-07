@@ -32,7 +32,19 @@ export const Creed: React.FC = () => {
 
       <section className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-10 py-12">
         <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-teal-100/80 flex flex-col items-center text-center gap-6 mb-12">
-          <span className="text-xs uppercase tracking-widest font-mono font-bold text-teal-600">The Sacred Rhythm</span>
+          {/* Bird of Prey Emblem */}
+          <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-3xl bg-gradient-to-tr from-sky-50 via-teal-50 to-indigo-50 border border-teal-100 p-3 shadow-md flex items-center justify-center">
+            <img
+              src="/assets/aistudio/Swift_Monster_Icon_b2946b8d.png"
+              alt="Bird of Prey ✝ made of Omega and two Mountains (fire / ice)"
+              className="w-full h-full object-contain filter drop-shadow-sm"
+            />
+          </div>
+
+          <div className="flex flex-col items-center gap-1">
+            <span className="text-xs uppercase tracking-widest font-mono font-bold text-teal-600">The Sacred Emblem &amp; Rhythm</span>
+            <span className="text-xs text-text-muted font-mono">Bird of Prey ✝ • Omega • Twin Mountains (Fire &amp; Ice)</span>
+          </div>
 
           <div className="py-4 flex flex-col gap-3 font-headline-sm text-xl sm:text-3xl text-text-headline max-w-2xl border-y border-teal-100/80 w-full">
             <p className="italic text-amber-600 font-semibold drop-shadow-sm">“We live in the ocean, under the sun.”</p>
@@ -41,7 +53,7 @@ export const Creed: React.FC = () => {
           </div>
 
           <p className="text-text-body text-sm sm:text-base max-w-2xl leading-relaxed">
-            The ocean is not a stadium or an obstacle to conquer. It is an immense, breathing fluid continuum. When our foils lift above water drag into frictionless flight, we enter a covenant of pure harmony with waves born thousands of miles offshore.
+            The ocean is not a stadium or an obstacle to conquer. It is an immense, breathing fluid continuum. The twin mountain peaks symbolize the dual forces that forge world-class swells: thermal fire and glacial ocean winds. At the epicenter, the Omega-born Bird of Prey dives through the water surface into perpetual hydrodynamic flight.
           </p>
         </div>
 
